@@ -1,0 +1,130 @@
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #242424;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    color: #213547;
+    background-color: #ffffff;
+  }
+  a:hover {
+    color: #747bff;
+  }
+  button {
+    background-color: #f9f9f9;
+  }
+}
+
+html,body, #root{
+  height: 100%;
+}
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.page_wrapper{
+  height: 100%;
+
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  max-width: 1240px;
+}
+
+.main{
+  height: 100%;
+  max-height: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 20px;
+}
+
+
+
+.dynamic_form{
+  flex: 1 1 100%;
+  border: 1px solid #eee6e6;
+  border-radius: 0.5rem;
+  padding: 20px;
+  height: 100%;
+  max-height: 100%;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.formOptionsBlock{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+.formOptionsBlock button{
+  display: block;
+  padding: 1rem;
+  font-size: 1.5rem;
+  cursor: pointer;
+  flex: 0 0 30;
+}
+
+.field{
+  display: flex;
+  justify-content: space-between;
+  font-size: 1.5rem;
+  gap: 3rem;
+}
+.field select, .field input{
+  display: block;
+  flex: 1 1 30%;
+  height: 45px;
+  font-size: inherit;
+}
+.field button{
+  cursor: pointer;
+  font-size: inherit;
+  height: 100%;
+  padding-inline: 1rem;
+}
+.dynamic_form__submit{
+
+  width: auto;
+  max-width: 320px;
+  padding: 1rem;
+  margin: 20px auto 0 ;
+  font-size: 1.5rem;
+}
+
+.dialog_wrapper{
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.3);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.dialog{
+  font-size: 1.5rem;
+  width: 640px;
+  height: 50%;
+  background-color: #242424;
+  padding: 20px;
+  border-radius: 20px;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
